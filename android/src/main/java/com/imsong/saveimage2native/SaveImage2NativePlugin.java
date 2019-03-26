@@ -23,12 +23,12 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
  * SaveImage2NativePlugin
  */
 public class SaveImage2NativePlugin implements MethodCallHandler {
-    public static Context context;
+    public static Context mContext;
     /**
      * Plugin registration.
      */
     public static void registerWith(Registrar registrar) {
-
+        mContext = registrar.context();
         final MethodChannel channel = new MethodChannel(registrar.messenger(), "save_image_2_native");
         channel.setMethodCallHandler(new SaveImage2NativePlugin());
     }
@@ -40,7 +40,7 @@ public class SaveImage2NativePlugin implements MethodCallHandler {
             if (call.arguments != null) {
                 Map params = (Map) call.arguments;
                 byte[] dataList = (byte[]) params.get("imageData");
-                saveStatus = saveImageToGallery(BitmapFactory.decodeByteArray(dataList, 0, dataList.length),context);
+                saveStatus = saveImageToGallery(BitmapFactory.decodeByteArray(dataList, 0, dataList.length),mContext);
                 result.success(saveStatus ? 1 : 0);
             } else result.success(false);
 

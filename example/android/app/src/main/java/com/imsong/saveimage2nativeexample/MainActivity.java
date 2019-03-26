@@ -12,7 +12,6 @@ public class MainActivity extends FlutterActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    GeneratedPluginRegistrant.registerWith(this)  ;
-    SaveImage2NativePlugin.context = this;
+    GeneratedPluginRegistrant.registerWith(this);
   }
 }

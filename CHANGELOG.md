@@ -1,3 +1,11 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* 初始化工程,iOS 平台保存逻辑.
+
+## 0.0.2
+
+* 修改Android 平台的保存逻辑.
+
+## 0.0.3
+
+* 修改Android 平台的context 的逻辑.

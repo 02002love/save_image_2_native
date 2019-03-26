@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
     int saveStatus ;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      saveStatus = await SaveImage2Native.saveImage2NativeMethod(imgUrl: 'http://upload.art.ifeng.com/2017/0425/1493105660290.jpg');
+      saveStatus = await SaveImage2Native.saveImage2NativeMethod(imgUrl: 'http://www.pptok.com/wp-content/uploads/2012/08/xunguang-4.jpg');
       platformVersion = saveStatus == 1 ? 'save success.':'save fail' ;
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
