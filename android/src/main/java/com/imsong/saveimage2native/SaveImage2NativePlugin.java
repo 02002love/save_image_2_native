@@ -68,8 +68,8 @@ public class SaveImage2NativePlugin implements MethodCallHandler {
 
             //保存图片后发送广播通知更新数据库
             Uri uri = Uri.fromFile(file);
-//            context.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, uri));
             if (isSuccess) {
+                context.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, uri));
                 return true;
             } else {
                 return false;
